@@ -1,0 +1,6 @@
+@LifeCampBackend_HostAddress = http://localhost:5224
+
+GET {{LifeCampBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

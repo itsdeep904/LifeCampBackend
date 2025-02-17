@@ -1,0 +1,118 @@
+[
+  {
+    "ContainingType": "LifeCampBackend.Controllers.AuthAPIController",
+    "Method": "AddUpdateAdmin",
+    "RelativePath": "api/Auth/AddUpdateAdmin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userdetail",
+        "Type": "LifeCamp.Models.AdminLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCampBackend.Controllers.AuthAPIController",
+    "Method": "AddUpdateUser",
+    "RelativePath": "api/Auth/AddUpdateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userdetail",
+        "Type": "LifeCamp.Models.UserLogin",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCampBackend.Controllers.AuthAPIController",
+    "Method": "CheckValidation",
+    "RelativePath": "api/Auth/CheckValidation",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCampBackend.Controllers.AuthAPIController",
+    "Method": "LoginDetail",
+    "RelativePath": "api/Auth/LoginDetail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDetailModel",
+        "Type": "LifeCamp.ViewModel.LoginDetailModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCamp.WebAPI.CampAPIController",
+    "Method": "AddUpdateCamp",
+    "RelativePath": "api/Camp/AddUpdateCamp",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "campDetail",
+        "Type": "LifeCamp.Models.CampDetail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCamp.WebAPI.CampAPIController",
+    "Method": "DeleteCampById",
+    "RelativePath": "api/Camp/DeleteCampById/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCamp.WebAPI.CampAPIController",
+    "Method": "GetAllCamps",
+    "RelativePath": "api/Camp/GetAllCamps",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LifeCamp.WebAPI.CampAPIController",
+    "Method": "GetCampById",
+    "RelativePath": "api/Camp/GetCampById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
