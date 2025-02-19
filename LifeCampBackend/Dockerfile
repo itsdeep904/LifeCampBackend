@@ -24,7 +24,15 @@ ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./LifeCampBackend.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
+
+
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+#set environment variable for the connection string(Render environment variable)
+ENV 
+DATABASE_CONNECTION_STRING="Server=life-camp-db;Database=LifeCamp;User ID=sa;Password=Password123;Encrpt=False"
+
+#Ensure the appsetting.json is included (if needed for local files)
+COPY ["LifeCampBackend/appsettings.json", "/app/appsettings.json"]
 ENTRYPOINT ["dotnet", "LifeCampBackend.dll"]
