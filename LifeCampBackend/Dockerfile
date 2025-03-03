@@ -29,10 +29,15 @@ RUN dotnet publish "./LifeCampBackend.csproj" -c $BUILD_CONFIGURATION -o /app/pu
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-#set environment variable for the connection string(Render environment variable)
-ENV 
-DATABASE_CONNECTION_STRING="Server=life-camp-db;Database=LifeCamp;User ID=sa;Password=Password123;Encrpt=False"
+# Set environment variable for the connection string
+ENV ConnectionStrings__LifeCampDbContextConnection="Server=PRIYA\\MSSQLSERVER01;Database=LifeCamp_DB;Trusted_Connection=True;TrustServerCertificate=True;"
+
+# Set environment variables for JWT configuration
+ENV Jwt__Issuer="https://localhost:44387/"
+ENV Jwt__Audience="https://localhost:44387/"
+ENV Jwt__SecretKey="LifeCampWebsiteByDeep_secretkey_B58PQ"
 
 #Ensure the appsetting.json is included (if needed for local files)
 COPY ["LifeCampBackend/appsettings.json", "/app/appsettings.json"]
+
 ENTRYPOINT ["dotnet", "LifeCampBackend.dll"]
