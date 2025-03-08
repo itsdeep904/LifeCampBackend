@@ -30,8 +30,7 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 # Set environment variable for the connection string
-ENV ConnectionStrings__LifeCampDbContextConnection="Server=PRIYA\\MSSQLSERVER01;Database=LifeCamp_DB;Trusted_Connection=True;TrustServerCertificate=True;"
-
+ENV ConnectionStrings__LifeCampDbContextConnection="Server=sql.bsite.net\MSSQL2016;Database=dblifecamp2025_;User Id=dblifecamp2025_;Password=Mandeep@12;TrustServerCertificate=True;"
 # Set environment variables for JWT configuration
 ENV Jwt__Issuer="https://localhost:44387/"
 ENV Jwt__Audience="https://localhost:44387/"
